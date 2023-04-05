@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+  /* font-family: "Sansita Swashed", cursive; */
+}
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+}
+.upload-container{
+    display: flex;
+}
+
+.head-img{
+    width: 600px;
+}
+.center {
+  position: relative;
+  padding: 30px 30px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+.center h1 {
+  font-size: 2em;
+  border-left: 5px solid dodgerblue;
+  padding: 10px;
+  color: #000;
+  /* letter-spacing: px; */
+  margin-bottom: 25px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.center .inputbox {
+  position: relative;
+  width: 445px;
+  /* width: auto; */
+  height: 50px; 
+  margin-bottom: 25px;
+  text-align: center;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.center .inputbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+.center .inputbox:last-child {
+  margin-bottom: 0;
+}
+.center .inputbox span {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-size: 1em;
+  transition: 0.6s;
+  font-family: sans-serif;
+}
+.center .inputbox input:focus ~ span{
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+}
+
+.btn{
+    font-size: 2rem;
+    border-radius: 8px;
+    padding: 3px 0px;
+    cursor: pointer;
+}
+.center .inputbox .btn{
+  width: 50%;
+  background: dodgerblue;
+  color: #fff;
+  border: #fff;
+}
+.center .inputbox:hover .btn {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+
+/* Download Container */
+
+.download-container{
+    display: flex;
+}
+.download-container .center{
+    margin: 0px 30px;
+    align-items: center;
+    justify-content: center;
+}
+.download-container .center .download-img{
+    width: 200px;
+    margin-left: 150px;
+    border: 2px solid black;
+}
+.download-container .center .mail-img{
+    width: 300px;
+    margin-left: 70px;
+    margin-bottom: 35px;
+}
+
+.password-img{
+  width: 300px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+.password-div h1{
+  margin: 20px 10px;
+}
+
+.linkbox{
+    text-align: center;
+    padding: 12px;
+    width: auto;
+    font-size: 1.3rem;
+    border: 2px dashed black;
+    border-radius: 10px;
+}
+
+.linkbox:hover{
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+.download-btn {
+    transition-duration: 0.4s;
+    width: 300px;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    border: 2px solid dodgerblue;
+    border-radius: 10px;
+    color: white;
+    background: dodgerblue;
+    text-decoration: none;
+  }
+  
+.download-btn:hover {
+    background: linear-gradient(45deg, greenyellow, dodgerblue); /* Green */
+    color: white;
+  } 
+  
+.download-btn a{
+  text-decoration: none;
+  color:white
+}
+
+  .Mail-btn{
+    position: relative;
+    top: 70px;
+  }
+
+.wrong{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+}
+
+
+
+
+
+
+/* Drop Zone */
+  #dropzone {
+    position: relative;
+    border: 2px dashed gray;
+    border-radius: 20px;
+    color: black;
+    opacity: 30%;
+    font: bold 24px/200px arial;
+    height: 200px;
+    margin: 30px auto;
+    text-align: center;
+    /* width: 400px; */
+    width: auto;
+  }
+  
+  #dropzone.hover {
+    border: 2px dashed black;
+    color: blue;
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+  }
+  
+  #dropzone.dropped {
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+    border: 3px double black;
+  }
+
+  #dropzone div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  #dropzone [type="file"] {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }

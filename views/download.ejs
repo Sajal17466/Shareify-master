@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shareify-Share the Passion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Font Awesome Icons -->
+  </head>
+  <body>
+    <img class="logo" src="/images/logo.png" alt="Shareify-Share" />
+    <% if(locals.fileLink != null){ %>
+    <section class="download-container">
+      <div class="center">
+        <h1>Your File has Been Uploaded</h1>
+        <img class="download-img" id="qr" src="http://api.qrserver.com/v1/create-qr-code/?data=<%=locals.fileLink%>!&size=100x100" alt="download-sd" />
+        <div class="linkbox"> 
+            <a class="link" href="<%= locals.fileLink %>"><%= locals.fileLink %></a>
+            <img onclick="copyToClipboard('.link')" style="width: 25px; cursor: pointer;" src="/images/copy.png" alt="copy">
+            <!-- <a href="https://www.flaticon.com/free-icons/copy" title="copy icons">Copy icons created by Freepik - Flaticon</a> -->
+        </div>
+        <div class="inputbox">
+          <button class="download-btn"><a href="<%= locals.fileLink %>">Download</a></button>
+        </div>
+      </div>
+
+      <div class="center">
+        <h1>Send the file via Email</h1>
+        <img class="mail-img" src="/images/mail-img.png" alt="Mail Image">
+        <form method="post" action=/send/<%= locals.fileid  %>
+          <div class="inputbox">
+            <input type="text" name="url" value="<%= locals.fileLink %>" style="display:none;">
+            <input type="text" name="receiversMail" />
+            <span>Receiver's Mail</span>
+              <button class="Mail-btn btn" type="submit">Send Mail</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <% } %>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="/js/index.js"></script>
+   
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "shareify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.4",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SahilChopade/Shareify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SahilChopade/Shareify/issues"
+  },
+  "homepage": "https://github.com/SahilChopade/Shareify#readme",
+  "devDependencies": {},
+  "description": ""
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shareify-Share the Passion</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Font Awesome Icons -->
+  </head>
+
+  <body>
+    <img class="logo" src="/images/logo.png" alt="Shareify-Share">
+    <section class="upload-container">
+    <div class="center">
+      <h1>SHARE FILES WITH SAFETY</h1>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div id="dropzone">
+          <div id="text">Drag&Drop or Choose File..</div>
+          <input type="file" id="file" name="file" required="required" />
+        </div>
+        <div class="inputbox">
+          <input type="password" id="password" name="password" />
+          <span>Password</span>
+        </div>
+        <div class="inputbox">
+          <button class="btn" type="submit">Get Link</button>
+        </div>
+      </form>
+    </div>
+    <img class="head-img" src="/images/main-img.svg" alt="Head-Image">
+</section>
+    <script
+    src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"
+    ></script>
+    <script src="/js/index.js"></script>
+    
+  </body>
+</html>
